@@ -21,4 +21,4 @@ RUN chmod +x karista.py
 
 EXPOSE 80 445
 
-ENTRYPOINT [ "python", "karista.py" ]
+ENTRYPOINT [ "flask", "run" ]
