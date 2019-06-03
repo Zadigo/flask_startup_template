@@ -1,6 +1,8 @@
 import os
 from flask import Flask
 from flask import render_template
+from flask_sqlalchemy import SQLAlchemy
+
 
 BASE_DIR = os.path.basename(os.path.dirname(__file__))
 
@@ -8,6 +10,11 @@ app = Flask(__name__)
 
 app.config['SECRET KEY'] = ''
 app.config['MEDIA'] = os.path.join(BASE_DIR, 'media')
+
+# DATABASE
+db = SQLAlchemy(app)
+
+# CORS
 
 @app.route('/', methods=['GET'])
 def hero():
