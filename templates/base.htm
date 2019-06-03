@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        {% block meta_description %}{% endblock meta_description %}
+
+        {% block meta_keywords %}{% endblock meta_keywords %}
+
+        {% block author %}
+            <meta name="author" content="Karista">
+        {% endblock author %}
+
+        <meta name="theme-color" content="#0d47a1"/>
+
+        <title>{% block title %}Karista: Vos produits locaux à portée de main{% endblock title %}</title>
+    
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="{ static 'favicon.png' }"/>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='extended_materialize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='hero.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+
+        {% block extra_css %}{% endblock extra_css %}
+        
+        <link rel="alternate" href="kurrikulam.com" hreflang="fr-fr" />
+        
+        {% block data_layer %}{% endblock data_layer %}
+    </head>
+
+    <body>
+        {% block nav %}{% endblock nav %}
+
+        {% block sidebar %}{% endblock sidebar %}
+
+        <main>
+            <!-- Hero -->
+            {% block hero %}
+
+                {% block header %}{% endblock header %}
+    
+                <!-- Main content -->
+                <div class="container">
+                    <div class="messages">
+                        {% for message in messages %}
+                            <div class="card-panel message hide white-text teal lighten-1 {% if message.tags %}{{ message.tags }}{% endif %}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% if messages %}
+                    {% endif %}
+                    
+                    <!-- Body -->
+                    {% block body %}{% endblock body %}
+                </div>
+    
+            {% endblock hero %}
+        </main>
+        
+        
+        <!-- Footer --> 
+        {% block footer %}{% endblock footer %}
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+        {% block extra_scripts %}{% endblock extra_scripts %}
+    </body>
+</html>

@@ -1,0 +1,32 @@
+{% extends "base.htm" %}
+
+{% block nav %}
+    {%  include "navs/nav.html" %}
+{% endblock nav %}
+
+{% block hero %}
+    <!-- HERO -->
+    <div class="hero red darken-3">
+        <div class="hero-wrapper">
+            <div class="call-to-action">
+                <div class="lead-stronger">
+                    Vos produits locaux à portée de main
+                </div>
+                <div class="lead-subtitle">
+                    Achetez tous vos produits locaux en seul endroit
+                </div>
+                <a href="#contact" class="btn-large red darken-1">S'inscrire</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BENEFITS -->
+    {% include "home/benefits.htm" %}
+
+    <!-- CONTACT -->
+    {% include "home/contact.htm" %}
+{% endblock hero %}
+
+{% block footer %}
+    {% include "navs/footer.htm" %}
+{% endblock footer %}

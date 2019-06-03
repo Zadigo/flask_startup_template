@@ -1,0 +1,42 @@
+/* 
+ * GENERAL 
+ */
+
+ html {
+    font-family: Montserrat, poppins, raleway, ubuntu, "Nunito Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5,
+.lead, .lead-subtitle,
+section.header div.header-subtitle, 
+section.header-large div.header-subtitle {
+    font-family: Montserrat, sans-serif;
+}
+
+p, a, li, .btn {
+    font-family: Roboto, sans-serif;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #039be5;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #039be5;
+}
+
+.bold-text-1 {
+    font-weight: 600;
+}
+
+.bold-text-2 {
+    font-weight: 800;
+}
+
+.section.hero {
+    height: 100vh;
+}
+
+.text-muted {
+    color: #777;
+}

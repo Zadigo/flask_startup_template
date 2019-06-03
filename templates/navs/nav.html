@@ -1,0 +1,21 @@
+{% set navigation = [('#apropos', 'A propos'), ('#contact', 'Contact')] %}
+{% macro nav_links(href, value) -%}
+    <li>
+        <a href="{{ href }}">{{ value }}</a>
+    </li>
+{%- endmacro %}
+
+<div class="navbar-fixed">
+    <nav class="red darken-1">
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="" class="brand-logo">Test</a>
+                <ul id="nav-mobile" class="hide-on-med-and-down right">
+                    {% for key, value in navigation %}
+                        {{ nav_links(key, value) }}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div> 
+    </nav>
+</div>
