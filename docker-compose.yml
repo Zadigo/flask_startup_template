@@ -6,3 +6,5 @@ services:
     ports:
       - "80"
       - "445"
+    volumes:
+      - ./app.py:/code/app.py

@@ -17,7 +17,7 @@ RUN pipenv install --deploy --system
 
 COPY . .
 
-RUN chmod +x karista.py
+RUN chmod +x app.py
 
 EXPOSE 80 445
 
