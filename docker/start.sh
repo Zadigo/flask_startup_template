@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 $gunicorn_path = "/code/docker/gunicorn"
 
 function start_development() {
