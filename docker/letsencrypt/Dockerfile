@@ -1,6 +1,6 @@
 FROM certbot/certbot
 
-RUN mkdir /start/
+RUN mkdir ./start
 
 COPY ./entrypoint.py /start/
 
