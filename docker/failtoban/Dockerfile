@@ -8,8 +8,7 @@ COPY ./entrypoint.sh ../start/
 RUN chmod +x ../start/entrypoint.sh
 
 # Create auth.log -> /var/log/auth.log
-RUN cd ../.. && ls -la
-# RUN touch ../../var/log/auth.log
+RUN touch ../../var/log/auth.log
 
 # EXPOSE 80 443
 
