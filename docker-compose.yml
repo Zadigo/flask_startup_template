@@ -18,3 +18,7 @@ services:
     volumes:
       - nginx_error_logs:/var/log/nginx/error.log
       - nginx_access_log:/var/log/nginx/access.log
+
+volumes:
+  nginx_error_logs: {}
+  nginx_access_log: {}
