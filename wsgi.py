@@ -19,7 +19,7 @@ application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://scott:tiger@localh
 
 # CORS
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 def hero():
     return render_template('home/hero.htm')
 
