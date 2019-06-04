@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ls -a
+echo ls -a
 
 # cp ./jails/sshd.conf /
 
