@@ -13,4 +13,4 @@ function start_production() {
 #     # use production server
 #     start_production
 # fi
-start_production
+start_development
