@@ -26,7 +26,7 @@ services:
   fail2ban:
     image: superitman/fail2ban
     container_name: fail2ban
-    entrypoint: failtoban_entrypoint.sh
+    entrypoint: /docker/failtoban/entrypoint.sh
     # network_mode: "host"
     # cap_add:
     #   - NET_ADMIN
