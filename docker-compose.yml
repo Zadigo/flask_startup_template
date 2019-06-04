@@ -19,9 +19,9 @@ services:
       - app
     links:
       - app
-    volumes:
-      - "nginx_error_logs:/var/log/nginx/error.log:ro"
-      - "nginx_access_log:/var/log/nginx/access.log:ro"
+    # volumes:
+    #   - "nginx_error_logs:/var/log/nginx/error.log:ro"
+    #   - "nginx_access_log:/var/log/nginx/access.log:ro"
 
   fail2ban:
     image: superitman/fail2ban
@@ -38,6 +38,6 @@ services:
     #   - "/var/log:/var/log:ro"
     restart: always
 
-volumes:
-  nginx_error_logs: {}
-  nginx_access_log: {}
+# volumes:
+#   nginx_error_logs: {}
+#   nginx_access_log: {}
