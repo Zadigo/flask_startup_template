@@ -15,6 +15,8 @@ class CreateCertbot:
         if self.data_dir_exists:
             pass
 
+        print('Pass#1')
+
     @property
     def data_dir_exists(self):
         if posixpath.exists(BASE_PATH):
