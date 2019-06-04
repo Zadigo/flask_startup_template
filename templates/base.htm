@@ -21,9 +21,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
         <!-- Fontawesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-        <!--Import Google Icon Font-->
+        <!-- GOOGLE ICON FONTS -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- Favicon -->
+
+        <!-- FAVICON -->
         <link rel="shortcut icon" type="image/png" href="{ static 'favicon.png' }"/>
 
         <link rel="stylesheet" href="{{ url_for('static', filename='extended_materialize.css') }}">
@@ -32,18 +33,27 @@
 
         {% block extra_css %}{% endblock extra_css %}
         
-        <link rel="alternate" href="kurrikulam.com" hreflang="fr-fr" />
+        <link rel="alternate" href="karista.com" hreflang="fr-fr" />
         
+        <!-- ANALYTICS -->
         {% block data_layer %}{% endblock data_layer %}
+        
+        {% include "analytics/google.htm" %}
+        {% include "analytics/facebook.htm" %}
     </head>
 
     <body>
+        <!-- ANALYTICS -->
+        {% include "analytics/google_no_scripts.htm" %}
+
+        <!-- NAV -->
         {% block nav %}{% endblock nav %}
 
+        <!-- SIDEBAR -->
         {% block sidebar %}{% endblock sidebar %}
 
         <main>
-            <!-- Hero -->
+            <!-- HERO -->
             {% block hero %}
 
                 {% block header %}{% endblock header %}
@@ -57,8 +67,6 @@
                             </div>
                         {% endfor %}
                     </div>
-                    {% if messages %}
-                    {% endif %}
                     
                     <!-- Body -->
                     {% block body %}{% endblock body %}
@@ -68,7 +76,7 @@
         </main>
         
         
-        <!-- Footer --> 
+        <!-- FOOTER --> 
         {% block footer %}{% endblock footer %}
 
         <!-- JQuery -->
@@ -76,7 +84,7 @@
     
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-
+        
         {% block extra_scripts %}{% endblock extra_scripts %}
     </body>
 </html>
