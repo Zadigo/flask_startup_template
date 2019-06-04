@@ -1,6 +1,6 @@
 FROM certbot/certbot
 
-RUN ls -la
+RUN ls -R
 
 # COPY init-letsencrypt.sh .
 
