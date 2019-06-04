@@ -1,10 +1,5 @@
 FROM superitman/fail2ban
 
-# Get Firewall settings
-RUN iptables -L
-
-RUN iptables -S
-
 # Starting path is /etc/fail2ban
 RUN mkdir ../start
 
@@ -19,14 +14,14 @@ RUN touch ../../var/log/auth.log
 # .local jail file
 # COPY ./jails/jail.local .
 
+# EXPOSE 80 443
+
 # Copy configuration files or
 # replace existing ones with
 # newer configuration options
-# COPY ./jails/nginx-http-auth.conf ./filter.d/
-COPY ./jails/nginx-badbots.conf ./filter.d/
-COPY ./jails/nginx-noproxy.conf ./filter.d/
-COPY ./jails/nginx-noscript.conf ./filter.d/
-
-# EXPOSE 80 443
+RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-badbots.conf > ./filter.d/nginx-badbots.conf
+RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-noscript.conf > ./filter.d/nginx-noscript.conf
+RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-dos.conf > ./filter.d/nginx-dos.conf
+RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-badrequests.conf > ./filter.d/nginx-badrequests.conf
 
 # ENTRYPOINT [ "../start/entrypoint.sh" ]
