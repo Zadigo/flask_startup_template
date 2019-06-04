@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 $gunicorn_path = "/code/docker/gunicorn"
 
