@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo ls -a
+touch /var/log/auth.log
 
 # cp ./jails/sshd.conf /
 
