@@ -24,11 +24,8 @@ services:
     #   - "nginx_access_log:/var/log/nginx/access.log:ro"
 
   fail2ban:
-    image: superitman/fail2ban
+    build: ./docker/fail2ban
     container_name: fail2ban
-    command:
-      - /bin/bash
-      - ls -la
     # network_mode: "host"
     # cap_add:
     #   - NET_ADMIN
