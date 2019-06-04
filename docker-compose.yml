@@ -8,3 +8,4 @@ services:
       - "445"
     volumes:
       - ./app.py:/code/app.py
+      - ./templates:/code/templates/
