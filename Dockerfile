@@ -31,4 +31,4 @@ EXPOSE 80 445
 # ENTRYPOINT [ "/start/start.sh" ]
 # ...test flask production server
 # ENTRYPOINT [ "flask", "run" ]
-CMD gunicorn app.py -w 4 -b 0.0.0.0:8000 --chdir=/code/ --log-file -
+CMD gunicorn flask_startup_template.app -w 4 -b 0.0.0.0:8000 --chdir=/code/ --log-file -
