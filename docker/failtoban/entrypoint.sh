@@ -1,6 +1,10 @@
 #!/bin/sh
 
-service fail2ban restart
-fail2ban-client status
+ls -a
+
+# cp ./jails/sshd.conf /
+
+# service fail2ban restart
+# fail2ban-client status
 
 "$@"
