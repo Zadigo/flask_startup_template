@@ -20,8 +20,21 @@ services:
     links:
       - app
     volumes:
-      - nginx_error_logs:/var/log/nginx/error.log:ro
-      - nginx_access_log:/var/log/nginx/access.log:ro
+      - "nginx_error_logs:/var/log/nginx/error.log:ro"
+      - "nginx_access_log:/var/log/nginx/access.log:ro"
+
+  fail2ban:
+    image: superitman/fail2ban
+    container_name: fail2ban
+    entrypoint: ['./docker/entrypoint.sh']
+    # network_mode: "host"
+    # cap_add:
+    #   - NET_ADMIN
+    #   - NET_RAW
+    # volumes:
+    #   - "./data:/data"
+    #   - "/var/log:/var/log:ro"
+    restart: always
 
 volumes:
   nginx_error_logs: {}
