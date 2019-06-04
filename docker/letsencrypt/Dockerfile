@@ -2,7 +2,7 @@ FROM certbot/certbot
 
 RUN mkdir /start/
 
-COPY ./docker/letsencrypt/entrypoint.py /start/
+COPY ./entrypoint.py /start/
 
 RUN chmod +x ./start/entrypoint.py
 
