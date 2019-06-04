@@ -2,12 +2,8 @@ FROM certbot/certbot
 
 RUN mkdir ./start
 
-COPY ./entrypoint.py /start/
+COPY ./init-letsencrypt.sh /start/
 
-# RUN chmod +x ./start/entrypoint.py
+RUN chmod +x ./start/init-letsencrypt.sh
 
-# COPY init-letsencrypt.sh .
-
-RUN chmod +x ../start/entrypoint.py
-
-ENTRYPOINT [ "../start/entrypoint.py" ]
+ENTRYPOINT [ "../start/init-letsencrypt.sh" ]
