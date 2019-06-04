@@ -15,10 +15,10 @@ services:
     container_name: nginx_server
     ports:
       - 60
-    volumes:
-      - nginx_error_logs:/var/log/nginx/error.log
-      - nginx_access_log:/var/log/nginx/access.log
+    # volumes:
+    #   - nginx_error_logs:/var/log/nginx/error.log:ro
+    #   - nginx_access_log:/var/log/nginx/access.log:ro
 
-volumes:
-  nginx_error_logs: {}
-  nginx_access_log: {}
+# volumes:
+#   nginx_error_logs: {}
+#   nginx_access_log: {}
