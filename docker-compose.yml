@@ -28,7 +28,7 @@ services:
     container_name: fail2ban
     command: cp /docker/failtoban/entrypoint.sh ../start/ &&
               chmod +x ../start/entrypoint.sh
-    entrypoint: ['../start/entrypoint.sh']
+    entrypoint: ['entrypoint.sh']
     # network_mode: "host"
     # cap_add:
     #   - NET_ADMIN
