@@ -1,7 +1,7 @@
 #!/bin/bash
 
 base_dir="/code"
-gunicorn_path="$base_dir/docker/gunicorn"
+gunicorn_logs_path="$base_dir/docker/gunicorn"
 
 function start_development() {
     flask run
@@ -10,7 +10,7 @@ function start_development() {
 function start_production() {
     gunicorn wsgi -w 4 -b 0.0.0.0:8000 &&
             --chdir=/code/ &&
-            --log-file="$gunicorn_path/gunicorn.out.log" --error-logfile="$gunicorn_path/gunicorn.err.log" &&
+            --log-file="$gunicorn_logs_path/gunicorn.out.log" --error-logfile="$gunicorn_logs_path/gunicorn.err.log" &&
             --capture_output=True
 }
 
