@@ -1,10 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-touch /var/log/auth.log
+echo started
 
-# cp ./jails/sshd.conf /
-
-service fail2ban restart
-fail2ban-client status
+# service fail2ban restart
+# fail2ban-client status
 
 "$@"
