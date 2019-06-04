@@ -22,9 +22,9 @@ SHELL [ "/bin/bash", "-lc" ]
 # Copy configuration files or
 # replace existing ones with
 # newer configuration options
-RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-badbots.conf > ./filter.d/nginx-badbots.conf
-RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-noscript.conf > ./filter.d/nginx-noscript.conf
-RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-dos.conf > ./filter.d/nginx-dos.conf
-RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-badrequests.conf > ./filter.d/nginx-badrequests.conf
+# RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-badbots.conf > ./filter.d/nginx-badbots.conf
+# RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-noscript.conf > ./filter.d/nginx-noscript.conf
+# RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-dos.conf > ./filter.d/nginx-dos.conf
+# RUN curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-badrequests.conf > ./filter.d/nginx-badrequests.conf
 
 # ENTRYPOINT [ "../start/entrypoint.sh" ]

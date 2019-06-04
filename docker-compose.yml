@@ -41,6 +41,9 @@ services:
       - nginx
       - app
 
+  certbot:
+    build: ./docker/letsencrypt
+
 # volumes:
 #   nginx_error_logs: {}
 #   nginx_access_log: {}
