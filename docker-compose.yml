@@ -33,6 +33,7 @@ services:
     # volumes:
     #   - "./data:/data"
     #   - "/var/log:/var/log:ro"
+    #   - "./jails/jail.local:jail.local:rw"
     restart: always
     depends_on:
       - nginx
