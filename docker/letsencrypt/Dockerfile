@@ -8,6 +8,6 @@ COPY ./entrypoint.py /start/
 
 # COPY init-letsencrypt.sh .
 
-RUN chmod +x entrypoint.py
+RUN chmod +x ./start/entrypoint.py
 
 ENTRYPOINT [ "./start/entrypoint.py" ]
