@@ -34,6 +34,11 @@ services:
     #   - "./data:/data"
     #   - "/var/log:/var/log:ro"
     restart: always
+    depends_on:
+      - nginx
+    links:
+      - nginx
+      - app
 
 # volumes:
 #   nginx_error_logs: {}
