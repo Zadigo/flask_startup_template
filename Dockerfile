@@ -6,6 +6,10 @@ ENV PYTHONDONTWRITEBYTECODE 1
 RUN mkdir code
 WORKDIR /code
 
+COPY ./docker/start.sh .
+RUN chmod +x ./start.sh
+
+
 # Copy dependencies files
 # for installation
 COPY Pipfile Pipfile
