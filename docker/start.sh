@@ -6,7 +6,7 @@ function start_development() {
 
 function start_production() {
     echo ${gunicorn_path}/gunicorn.out.log
-    gunicorn app.py -w 4 -b 0.0.0.0:8000 &&
+    gunicorn wsgi -w 4 -b 0.0.0.0:8000 &&
             --chdir=/code/ &&
             --log-file=${gunicorn_path}/gunicorn.out.log --error-logfile=${gunicorn_path}/gunicorn.err.log &&
             --capture_output=True
