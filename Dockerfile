@@ -7,7 +7,7 @@ RUN mkdir code
 WORKDIR /code
 
 COPY ./docker/start.sh /start/
-RUN chmod +x ./start/start.sh
+RUN chmod +x /start/start.sh
 
 
 # Copy dependencies files
