@@ -3,6 +3,7 @@
 import os
 from flask import Flask
 from flask import render_template
+from flask.app import 
 # from flask_sqlalchemy import SQLAlchemy
 
 
@@ -14,6 +15,7 @@ app.config['SECRET KEY'] = ''
 app.config['MEDIA'] = os.path.join(BASE_DIR, 'media')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://scott:tiger@localhost/test'
 
+application = app.wsgi_app('production', [])
 
 # DATABASE
 # db = SQLAlchemy(app)
