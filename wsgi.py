@@ -8,13 +8,11 @@ from flask import render_template
 
 BASE_DIR = os.path.basename(os.path.dirname(__file__))
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-app.config['SECRET KEY'] = ''
-app.config['MEDIA'] = os.path.join(BASE_DIR, 'media')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://scott:tiger@localhost/test'
-
-application = app.wsgi_app('production', app)
+application.config['SECRET KEY'] = ''
+application.config['MEDIA'] = os.path.join(BASE_DIR, 'media')
+application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://scott:tiger@localhost/test'
 
 # DATABASE
 # db = SQLAlchemy(app)
@@ -26,4 +24,4 @@ def hero():
     return render_template('home/hero.htm')
 
 if __name__ == "__main__":
-    app.run(port='8000', debug=True)
+    application.run(port='8000', debug=True)

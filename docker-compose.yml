@@ -7,5 +7,5 @@ services:
       - "80"
       - "445"
     volumes:
-      - ./app.py:/code/app.py
+      - ./wsgi.py:/code/wsgi.py
       - ./templates:/code/templates/

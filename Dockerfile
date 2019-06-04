@@ -23,7 +23,7 @@ RUN pipenv install --deploy --system
 
 COPY . .
 
-RUN chmod +x app.py
+RUN chmod +x wsgi.py
 
 EXPOSE 80 445
 
@@ -31,4 +31,4 @@ EXPOSE 80 445
 # ENTRYPOINT [ "/start/start.sh" ]
 # ...test flask production server
 # ENTRYPOINT [ "flask", "run" ]
-CMD gunicorn "app:Main()" -w 4 -b 0.0.0.0:8000 --chdir=/code/ --log-file -
+CMD gunicorn wsgi -w 4 -b 0.0.0.0:8000 --chdir=/code/ --log-file -
