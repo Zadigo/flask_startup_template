@@ -1,0 +1,1 @@
+curl -s https://raw.githubusercontent.com/Zadigo/fail2ban-configs/master/filter.d/nginx-badbots.conf
