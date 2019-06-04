@@ -4,7 +4,7 @@ FROM nginx
 RUN rm -v /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 8080
+EXPOSE 80 443
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]

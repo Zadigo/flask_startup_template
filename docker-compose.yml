@@ -5,7 +5,7 @@ services:
     build: .
     container_name: flask_application
     ports:
-      - 50
+      - 20
     volumes:
       - ./wsgi.py:/code/wsgi.py
       - ./templates:/code/templates/
