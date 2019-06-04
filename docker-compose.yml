@@ -14,7 +14,7 @@ services:
     build: ./docker/nginx
     container_name: nginx_server
     ports:
-      - 60
+      - 5000:80
     # volumes:
     #   - nginx_error_logs:/var/log/nginx/error.log:ro
     #   - nginx_access_log:/var/log/nginx/access.log:ro
