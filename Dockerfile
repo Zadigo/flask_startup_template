@@ -6,8 +6,8 @@ ENV PYTHONDONTWRITEBYTECODE 1
 RUN mkdir code
 WORKDIR /code
 
-COPY ./docker/start.sh .
-RUN chmod +x ./start.sh
+COPY ./docker/start.sh /start/
+RUN chmod +x ./start/start.sh
 
 
 # Copy dependencies files
@@ -26,6 +26,6 @@ RUN chmod +x app.py
 EXPOSE 80 445
 
 # Start management file
-ENTRYPOINT [ "start.sh" ]
+ENTRYPOINT [ "./start/start.sh" ]
 # ...test flask production server
 # ENTRYPOINT [ "flask", "run" ]
