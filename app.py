@@ -14,7 +14,7 @@ app.config['SECRET KEY'] = ''
 app.config['MEDIA'] = os.path.join(BASE_DIR, 'media')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://scott:tiger@localhost/test'
 
-application = app.wsgi_app('production', [])
+application = app.wsgi_app('production', app)
 
 # DATABASE
 # db = SQLAlchemy(app)
