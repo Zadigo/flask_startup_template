@@ -2,7 +2,7 @@ FROM superitman/fail2ban
 
 RUN ls -la && mkdir ../start
 
-COPY ./entrypoint ../start/
+COPY ./entrypoint.sh ../start/
 
 RUN chmod +x ../start/entrypoint.sh
 
