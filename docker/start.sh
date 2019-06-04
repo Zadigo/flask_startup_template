@@ -1,10 +1,14 @@
+$gunicorn_path = "/code/docker/gunicorn/"
+
 function start_development() {
     flask run
 }
 
 function start_production() {
+    echo ${gunicorn_path}/errors.log
     gunicorn app.py -w 4 -b 0.0.0.0:8000 --chdir=/code/ &&
-             --log-file=/code/gunicorn/errors.log --error-logfile=/code/gunicorn/error.log
+             --log-file=${gunicorn_path}/errors.log --error-logfile=${gunicorn_path}/error.log &&
+             --capture_output=True
 }
 
 # if [ ${PRODUCTION} == "False" ]; then
