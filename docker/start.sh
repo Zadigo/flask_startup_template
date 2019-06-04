@@ -3,7 +3,7 @@ function start_development() {
 }
 
 function start_production() {
-    gunicorn app.wsgi -w 4 -b 0.0.0.0:8000 --chdir=/code/ --log-file -
+    gunicorn app.py -w 4 -b 0.0.0.0:8000 --chdir=/code/ --log-file -
 }
 
 # if [ ${PRODUCTION} == "False" ]; then
