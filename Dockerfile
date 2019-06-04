@@ -21,4 +21,7 @@ RUN chmod +x app.py
 
 EXPOSE 80 445
 
-ENTRYPOINT [ "flask", "run" ]
+# Start management file
+ENTRYPOINT [ "start.sh" ]
+# ...test flask production server
+# ENTRYPOINT [ "flask", "run" ]
