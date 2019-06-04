@@ -17,7 +17,7 @@ RUN touch ../../var/log/auth.log
 # EXPOSE 80 443
 
 # Use bash to run curl
-SHELL [ "/bin/bash" ]
+SHELL [ "/bin/bash", "sh" ]
 
 # Copy configuration files or
 # replace existing ones with
