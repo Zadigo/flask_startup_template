@@ -8,4 +8,6 @@ COPY ./entrypoint.sh ../start/
 
 RUN chmod +x ../start/entrypoint.sh
 
+EXPOSE 80 443
+
 ENTRYPOINT [ "../start/entrypoint.sh" ]
