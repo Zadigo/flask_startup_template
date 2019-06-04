@@ -3,7 +3,6 @@
 import os
 from flask import Flask
 from flask import render_template
-from flask.app import 
 # from flask_sqlalchemy import SQLAlchemy
 
 
