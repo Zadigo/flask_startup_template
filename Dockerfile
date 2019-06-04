@@ -25,7 +25,7 @@ COPY . .
 
 RUN chmod +x wsgi.py
 
-EXPOSE 5000
+EXPOSE 80 443 8000
 
 # Start management file
 ENTRYPOINT [ "../start/start.sh" ]
