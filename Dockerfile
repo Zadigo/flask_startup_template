@@ -2,6 +2,8 @@ FROM python:3
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
 
+LABEL "com.example.app"="App"
+
 # Application management & firing
 RUN mkdir code
 WORKDIR /code
