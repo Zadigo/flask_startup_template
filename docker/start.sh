@@ -3,7 +3,8 @@ function start_development() {
 }
 
 function start_production() {
-    gunicorn app.py -w 4 -b 0.0.0.0:8000 --chdir=/code/ --log-file -
+    gunicorn app.py -w 4 -b 0.0.0.0:8000 --chdir=/code/ &&
+             --log-file=/code/gunicorn/errors.log --error-logfile=/code/gunicorn/error.log
 }
 
 # if [ ${PRODUCTION} == "False" ]; then
@@ -13,4 +14,5 @@ function start_production() {
 #     # use production server
 #     start_production
 # fi
-start_development
+start_production
+# start_development

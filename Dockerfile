@@ -4,13 +4,13 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 LABEL "com.example.app"="App"
 
-# Application management & firing
-RUN mkdir code
-WORKDIR /code
-
 COPY ./docker/start.sh /start/
 RUN chmod +x /start/start.sh
 
+
+# Application management & firing
+RUN mkdir code
+WORKDIR /code
 
 # Copy dependencies files
 # for installation
